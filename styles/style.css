@@ -1,3 +1,12 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -7,13 +16,14 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .header {
   display: flex;
   align-items: center;
   position: relative;
+  background-color: #f2f2f2;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
@@ -33,6 +43,7 @@
   height: 568px;
   background: #2f80ed;
   z-index: 0;
+  animation: rotation 20s linear infinite;
 }
 
 .logo {
@@ -148,11 +159,12 @@
   padding: 0;
 }
 
-.digits {
+.techniques {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  width: 80%;
+  margin: 0 auto 0;
   padding: 0;
   background-color: white;
 }
@@ -177,45 +189,81 @@
   font-weight: normal;
 }
 
-.table {
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 1100px;
-  margin: 0 auto 100px;
+  width: 920px;
+  margin: 0;
   padding: 0;
+  text-align: center;
   list-style-type: none;
 }
 
-.table__cell {
-  margin: 60px 0 0;
+.cards__item {
+  width: 240px;
+  margin-right: 100px;
   padding: 0;
-  width: 250px;
 }
 
-.table__heading {
-  margin: 0;
+.cards__item:nth-child(3) {
+  margin-right: 0;
+}
+
+.cards__image {
+  border-radius: 100%;
+  width: 160px;
+  height: 160px;
+  margin: 60px 40px 0;
+}
+
+.cards__title {
+  margin-top: 43px;
   padding: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
 }
 
-.table__text {
-  margin: 20px 0 0;
+.cards__description {
+  margin-top: 16px;
   padding: 0;
-  line-height: 1.20;
+  line-height: 23px;
   font-size: 18px;
   font-weight: normal;
 }
 
-.table_text_accent {
-  margin: 20px 0 0;
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
   padding: 0;
-  line-height: 1.20;
-  font-size: 18px;
-  font-weight: normal;
+  position: relative;
+}
+
+.video__inframes {
+  margin: 50px auto -30px auto;
+  padding: 0;
+}
+
+.video__inframe {
+  margin: 0;
+  padding: 0;
+  width: 515px;
+  height: 316px;
+}
+
+.video__inframe:first-of-type {
+  margin-right: 20px;
+}
+
+.oakley {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
 .feynman {
@@ -226,6 +274,7 @@
   padding: 0;
   position: relative;
   min-height: 890px;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
@@ -275,6 +324,137 @@
   height: 637px;
 }
 
+.digits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto 100px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.table__cell {
+  margin: 60px 0 0;
+  padding: 0;
+  width: 250px;
+}
+
+.table__cell_theme_dark {
+  margin: 80px 0 0;
+  padding: 0;
+  width: 200px;
+  list-style-type: none;
+  color: white;
+}
+
+.table__heading {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__text {
+  margin: 20px 0 0;
+  padding: 0;
+  line-height: 1.20;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.table_text_accent {
+  margin: 20px 0 0;
+  padding: 0;
+  line-height: 1.20;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.khan {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 105px auto 0;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan__quote {
+  margin: 50px 0 0;
+  width: 790px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin: 36px 0 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.khan__quote-author-subline {
+  margin: 10px 0 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 68px;
+}
+
+.khan__book-pic {
+  object-fit: cover;
+  object-position: top left;
+  width: 620px;
+  height: 608px;
+  margin-right: 48px;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
+
 .kaufman {
   display: flex;
   flex-direction: column;
@@ -298,12 +478,20 @@
 }
 
 .table_theme_dark {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  padding: 0;
+  list-style-type: none;
   margin: 0 auto 90px;
   z-index: 2;
 }
 
 .table__cell_theme_dark {
   margin: 80px 0 0;
+  padding: 0;
   width: 200px;
   list-style-type: none;
   color: white;
@@ -319,6 +507,7 @@
   height: 877px;
   position: absolute;
   right: -210px;
+  animation: rotation 20s linear infinite;
 }
 
 .footer {
