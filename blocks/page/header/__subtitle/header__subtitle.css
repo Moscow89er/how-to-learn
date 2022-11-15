@@ -7,6 +7,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  width: 388px;
+  max-width: 388px;
+  width: 100%;
   z-index: 2;
 }
