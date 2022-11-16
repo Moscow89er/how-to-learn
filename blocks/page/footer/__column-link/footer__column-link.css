@@ -3,10 +3,12 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
 .footer__column-link:hover {
   opacity: 0.33;
-  transition: 1s linear;
+  transition: opacity 1s linear;
 }
